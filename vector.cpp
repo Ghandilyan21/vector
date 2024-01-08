@@ -6,7 +6,7 @@ Vector<value_type>::Vector()
         m_copacity{},
         m_arr{nullptr}
 {
-
+    
 }
 template <typename value_type>
 Vector<value_type>::Vector(size_type size)
@@ -336,6 +336,7 @@ const Vector<value_type>& Vector<value_type>::operator=(Vector<value_type>&& rhs
     rhs.m_arr = nullptr;
     rhs.m_size = 0;
     rhs.m_copacity = 0;
+    return *this;
 }
 template <typename value_type>
 Vector<value_type>::Vector(size_type count, value_type value)
